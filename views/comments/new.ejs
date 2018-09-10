@@ -1,0 +1,15 @@
+<% include ../partials/header %>
+
+<div class="container" style="width: 600px; margin: 25px auto;">
+	<h3>Make a new comment to <%= camp.name %> Camp</h3>
+	<div style=" width: 50%; margin:25px auto;">
+		<form action="/campgrounds/<%= camp.id %>/comments" method="POST" >
+			<div class="form-group"><input type="text" name="commentContent" placeholder="comment" style="border:none; margin: 10px 20px;"></div>
+			<button type="submit" class="btn btn-primary btn-block" style="width: 50%; margin-left: 70px; margin-bottom: 20px;">
+				Submit Comment
+			</button>
+		</form>		
+	</div>
+</div>
+
+<% include ../partials/footer %>
